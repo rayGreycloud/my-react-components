@@ -3,26 +3,30 @@ import React from 'react';
 const ExpandingSearchBar = () => {
   const handleSubmit = e => {
     e.preventDefault();
+    // document.getElementById('search-input').blur();
+    document.getElementById('search-button').blur();
 
-    window.alert('Search submitted!');
+    console.log('Search submitted!');
   };
 
   return (
-    <div class='content'>
+    <div className='content'>
       <h3>Expanding Search Bar</h3>
-      <div class='search'>
+      <div className='search'>
         <input
+          id='search-input'
           type='text'
-          class='search__input'
+          className='search__input'
           aria-label='search'
           placeholder='enter your search'
         />
         <button
-          class='search__submit'
+          id='search-button'
+          className='search__submit'
           aria-label='submit search'
           onClick={handleSubmit}
         >
-          <i class='fas fa-search'></i>
+          <i className='fas fa-search'></i>
         </button>
       </div>
     </div>
